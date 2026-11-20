@@ -16,6 +16,6 @@ export function cacheHitLabel(messages: readonly Message[] | undefined): string 
     const { input, cache: { read, write } } = message.tokens
     if (![input, read, write].every((n) => Number.isFinite(n) && n >= 0)) continue
     const total = input + read + write
-    if (total > 0 && Number.isFinite(total)) return `Cache hit ${(read / total * 100).toFixed(1)}%`
+    if (total > 0 && Number.isFinite(total)) return `Cache: ${Math.round(read / total * 100)}%`
   }
 }

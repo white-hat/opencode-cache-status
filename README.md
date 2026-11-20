@@ -1,6 +1,6 @@
 # OpenCode Cache Status
 
-A local OpenCode 2 terminal plugin that adds one item to the prompt footer: `Cache hit 60.0%`.
+A local OpenCode 2 terminal plugin that adds one item to the prompt footer: `Cache: 44%`.
 
 It shows the latest completed model request with token usage in the current session, not a session-wide average. The percentage is `cache reads / (uncached input + cache reads + cache writes)`. Cache writes count as misses. If no usable usage is available, the plugin shows nothing.
 
