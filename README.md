@@ -1,6 +1,6 @@
 # OpenCode Cache Status
 
-A local OpenCode 2 terminal plugin that adds one item to the prompt footer: `Cache: 44%`.
+An OpenCode 2 terminal plugin that adds one item to the prompt footer: `Cache: 44%`.
 
 It shows the latest completed model request with token usage in the current session, not a session-wide average. The percentage is `cache reads / (uncached input + cache reads + cache writes)`. Cache writes count as misses. If no usable usage is available, the plugin shows nothing.
 
@@ -8,16 +8,15 @@ The plugin reads only message types, completion markers, and token counters from
 
 ## Install
 
-Clone this repository, then add its absolute path to the `plugins` array in `~/.config/opencode/cli.json` (or `$XDG_CONFIG_HOME/opencode/cli.json` if set). Keep your existing settings and plugin entries.
+On OpenCode 2.3.2 or later, install directly from the GitHub release. No clone or build is needed:
 
-```json
-{
-  "$schema": "https://opencode.ai/v2/cli.json",
-  "plugins": ["/absolute/path/to/opencode-cache-status"]
-}
+```sh
+opencode plugin add 'github:white-hat/opencode-cache-status#v0.1.0'
 ```
 
-No npm install or build is needed. To remove the plugin, remove its entry from `cli.json`.
+OpenCode adds the package to `~/.config/opencode/cli.json` (or `$XDG_CONFIG_HOME/opencode/cli.json` if set). To uninstall it, remove that entry from the `plugins` array.
+
+If you already installed from a local checkout, remove the old path from the same array before adding the new package. For local development, you can still add the checkout's absolute path instead of the package.
 
 ## Test
 

@@ -1,0 +1,36 @@
+{
+  "name": "opencode-cache-status",
+  "version": "0.1.0",
+  "description": "Show prompt cache hit rate in the OpenCode 2 footer.",
+  "type": "module",
+  "exports": {
+    "./tui": "./tui.ts"
+  },
+  "files": [
+    "tui.ts",
+    "cache-hit.ts"
+  ],
+  "peerDependencies": {
+    "@opencode/plugin": "^2.3.2",
+    "@opentui/solid": ">=0.8.4",
+    "solid-js": "^1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/plugin": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/white-hat/opencode-cache-status.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
