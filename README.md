@@ -8,10 +8,10 @@ The plugin reads only message types, completion markers, and token counters from
 
 ## Install
 
-On OpenCode 2.3.2 or later, install directly from the GitHub release. No clone or build is needed:
+On OpenCode 2.3.2 or later, install the npm package. No clone or build is needed:
 
 ```sh
-opencode plugin add 'github:white-hat/opencode-cache-status#v0.1.0'
+opencode plugin add opencode-cache-status@0.1.0
 ```
 
 OpenCode adds the package to `~/.config/opencode/cli.json` (or `$XDG_CONFIG_HOME/opencode/cli.json` if set). To uninstall it, remove that entry from the `plugins` array.
